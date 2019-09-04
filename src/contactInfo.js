@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import { Grid, Cell, List, ListItem, ListItemContent,Chip } from 'react-mdl';
 import './App.css';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faPhone,faEnvelope} from '@fortawesome/free-solid-svg-icons'
+import Particles from 'react-particles-js';
+import{FaDownload,FaEnvelope,FaPhone} from 'react-icons/fa';
 
 class Contact extends Component {
  
+ linkToResume = () => {
+  window.location.href = "https://drive.google.com/open?id=1nHeljRMffrg3zWyJbKx1NuTZFz0f4szw"
+ }
   
   render() {
     return(
@@ -34,16 +37,16 @@ class Contact extends Component {
                 <li style={{fontSize: '15px',margin:'auto'}}>
                 
                 
-                  <FontAwesomeIcon icon={faPhone}/> - (226)-234-2444
+                  <FaPhone className="iconColor animated swing delay-1s duration-60s"/> - (226)-234-2444
                   
             
                 </li>
                
                   <li style={{margin:'auto',fontSize: '15px'}}>
-                  <FontAwesomeIcon icon={faEnvelope} className="iconColor animated bounce delay-5s duration-30s"/> - nina8867@gmail.com
+                  <FaEnvelope className="iconColor animated heartBeat delay-3s duration-60s" onClick={this.mailTo}/> - nina8867@gmail.com
                 </li>
                   
-                  <Chip >Resume here</Chip>
+                  <Chip onClick={this.linkToResume}>Resume here</Chip>
                  
             
               </ul>

@@ -95,7 +95,7 @@
 .image-set {
  height: 500px;
  vertical-align: middle;
- border:50%;
+ border-radius:50%;
 }
 
 .header-color{
